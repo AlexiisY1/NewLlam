@@ -25,10 +25,10 @@ class _FormPageState extends State<FormPage> {
   Widget build(BuildContext context) {
     return Container(
       child: Scaffold(
-        backgroundColor: Colors.blue[100],
+        backgroundColor: Colors.white,
         appBar: AppBar(
-          title: Text('Ekatherine García'),
-          backgroundColor: Colors.pink[200],
+          title: Text('Alexis Yarid Sánchez'),
+          backgroundColor: Colors.black,
         ),
         body: Padding(
           padding: const EdgeInsets.all(10.0),
@@ -41,19 +41,21 @@ class _FormPageState extends State<FormPage> {
                   /*width: 150.0,
                   height: 150.0,*/
                   child: Center(
-                    child: Image.network(
-                        'https://1000marcas.net/wp-content/uploads/2020/02/Est%C3%A9e-Lauder-Logo-tumb.jpg'),
+                    child: Icon(
+                      Icons.verified,
+                      size: 80,
+                    ),
                   ),
                 ),
                 TextFormField(
                   keyboardType: TextInputType.text,
                   decoration: InputDecoration(
                       labelText: 'Nombre completo',
-                      labelStyle: TextStyle(color: Colors.pink[200]),
-                      hintText: 'Ejemplo: Ana María López Pérez',
+                      labelStyle: TextStyle(color: Colors.black),
+                      hintText: 'Ejemplo: Alexis Yarid Sánchez Vergara',
                       prefixIcon: Icon(
                         Icons.person_outline_sharp,
-                        color: Colors.pink[200],
+                        color: Colors.black,
                       )),
                   //controller: nombreTextController,
                   onSaved: (value) {
@@ -75,11 +77,12 @@ class _FormPageState extends State<FormPage> {
                   keyboardType: TextInputType.text,
                   decoration: InputDecoration(
                       labelText: 'Dirección',
-                      labelStyle: TextStyle(color: Colors.pink[200]),
-                      hintText: 'Ejemplo: Cerro no.2, col. El Doraro',
+                      labelStyle: TextStyle(color: Colors.black),
+                      hintText:
+                          'Ejemplo: Venustiano Carranza #57, col.miradores',
                       prefixIcon: Icon(
                         Icons.home_outlined,
-                        color: Colors.pink[200],
+                        color: Colors.black,
                       )),
                   //controller: nombreTextController,
                   onSaved: (value) {
@@ -101,11 +104,11 @@ class _FormPageState extends State<FormPage> {
                   keyboardType: TextInputType.text,
                   decoration: InputDecoration(
                       labelText: 'Código Postal',
-                      labelStyle: TextStyle(color: Colors.pink[200]),
-                      hintText: 'Ejemplo: 76805',
+                      labelStyle: TextStyle(color: Colors.black),
+                      hintText: 'Ejemplo: 76850',
                       prefixIcon: Icon(
                         Icons.fence_outlined,
-                        color: Colors.pink[200],
+                        color: Colors.black,
                       )),
                   //controller: nombreTextController,
                   onSaved: (value) {
@@ -127,11 +130,11 @@ class _FormPageState extends State<FormPage> {
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
                       labelText: 'Correo',
-                      labelStyle: TextStyle(color: Colors.pink[200]),
-                      hintText: 'ejemplo@example.com',
+                      labelStyle: TextStyle(color: Colors.black),
+                      hintText: 'ejemplo: alguien@example.com',
                       prefixIcon: Icon(
                         Icons.mail_outline,
-                        color: Colors.pink[200],
+                        color: Colors.black,
                       )),
                   //controller: apTextController,
                   onSaved: (value) {
@@ -153,11 +156,11 @@ class _FormPageState extends State<FormPage> {
                     keyboardType: TextInputType.text,
                     decoration: InputDecoration(
                         labelText: 'Contraseña',
-                        labelStyle: TextStyle(color: Colors.pink[200]),
-                        hintText: 'Ejemplo: A1h%gR4&',
+                        labelStyle: TextStyle(color: Colors.black),
+                        hintText: 'Ejemplo: 1234567',
                         prefixIcon: Icon(
                           Icons.lock_outline,
-                          color: Colors.pink[200],
+                          color: Colors.black,
                         )),
                     //controller: apTextController,
                     onSaved: (value) {
@@ -185,16 +188,20 @@ class _FormPageState extends State<FormPage> {
                   child: RaisedButton(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),
-                    color: Colors.pink[200],
-                    textColor: Colors.white,
+                    color: Colors.yellow,
+                    textColor: Colors.black,
                     onPressed: () {
                       if (formKey.currentState.validate()) {
                         formKey.currentState.save();
-                        if (nombre.compareTo('Ekatherine Garcia') == 0 &&
-                            direccion.compareTo('Esperanza no.2') == 0 &&
-                            postal.compareTo('76805') == 0 &&
-                            email.compareTo('eka@gmail.com') == 0 &&
-                            password.compareTo('eka123') == 0) {
+                        if (nombre.compareTo('Sánchez Vergara Alexis Yarid') ==
+                                0 &&
+                            direccion.compareTo(
+                                    'Camino Real a Contepec #5 Col.El Pinar') ==
+                                0 &&
+                            postal.compareTo('76850') == 0 &&
+                            email.compareTo('yarid-sanchez984@gmail.com') ==
+                                0 &&
+                            password.compareTo('325yt425gs') == 0) {
                           Navigator.pushNamed(context, 'formulario_dos',
                               arguments: Argumentos(
                                   nombre: this.nombre,
